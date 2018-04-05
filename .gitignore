@@ -2,6 +2,7 @@
 venv/
 .coverage
 __pycache__/
+*/__pycache__/
 mainHP/__pycache__/
 mainHP/settings/__pycache__/
 main/__pycache__/

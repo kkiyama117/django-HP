@@ -1,0 +1,9 @@
+{% extends "main/base.html" %}
+{% block content %}
+    Hello, world. You're at the index
+    {% if user.is_authenticated %}
+        for {{ user.email }}.
+    {% endif %}
+    <hr>
+    準備中
+{% endblock %}

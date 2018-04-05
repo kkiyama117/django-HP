@@ -1,0 +1,6 @@
+DJANGO_SETTINGS_MODULE="mainHP.settings.staging"
+SECRET_KEY='s0s0s0s0s00s0s0s0s0s0s0s00s0s0s0s0s0'
+DB_NAME='test_db'
+DB_USER='kiyama'
+DB_PASS='password'
+DB_HOST='db'

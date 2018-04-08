@@ -1,7 +1,11 @@
+beautifulsoup4
 django
 django-debug-toolbar
 django-environ
 djangorestframework
 Jinja2
+lxml
 pillow
+psycopg2-binary
 pytest
+requests

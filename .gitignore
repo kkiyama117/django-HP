@@ -6,6 +6,7 @@ db.sqlite3
 static
 *.pytest_cache
 *.tox
+!*__init__.py
 
 */migrations/
 */fixtures

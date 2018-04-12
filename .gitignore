@@ -7,8 +7,11 @@ static
 *.pytest_cache
 *.tox
 !*__init__.py
+init.sh
+uwsgi.ini
 
 */migrations/
 */fixtures
 .env/production
 locale/
+

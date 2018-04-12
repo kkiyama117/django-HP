@@ -6,6 +6,8 @@ from transfacils.helpers.get_trans_api_data import line_data_generator, \
 
 def initialize():
     initialize_lines_db()
+
+
 def initialize_lines_db():
     import json
 
@@ -22,7 +24,7 @@ def initialize_line_data():
     line = get_line_data()
     line_dict = {"model": "transfacils.route", "pk": line["line_cd"],
                  "fields": {"name": line["line_name"],
-                            "kind": "train"}}
+                            "kind": "TRAIN"}}
     data_dicts.append(line_dict)
     for station in line_data_generator():
         data_dict = {"model": "transfacils.station",

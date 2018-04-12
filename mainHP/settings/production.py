@@ -3,7 +3,7 @@ from environ import environ
 from .common import *
 
 env = environ.Env()
-env_base=environ.Path(__file__) - 3
+env_base = environ.Path(__file__) - 3
 if os.environ["ENVIRONMENT"] == "staging":
     env_file = str(env_base.path(".env/staging"))
 else:
@@ -15,7 +15,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '133.130.113.34.xip.io', '13.250.165.215.xip.io']
+ALLOWED_HOSTS = ['localhost', 'hinatan.jp']
 
 WSGI_APPLICATION = 'mainHP.wsgi.application'
 

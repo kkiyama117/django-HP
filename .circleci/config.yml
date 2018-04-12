@@ -45,7 +45,9 @@ jobs:
       # https://pytest.org
       - run:
           name: run pytest
-          command: pytest
+          command: |
+            . venv/bin/activate
+            pytest
 
       - run:
           name: run django tests

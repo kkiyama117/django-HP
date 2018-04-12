@@ -11,7 +11,7 @@ init.sh
 uwsgi.ini
 
 */migrations/
+!*/migrations/__init__.py
 */fixtures
 .env/production
 locale/
-

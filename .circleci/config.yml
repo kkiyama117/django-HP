@@ -43,16 +43,16 @@ jobs:
       # this example uses Django's built-in test-runner
       # other common Python testing frameworks include pytest and nose
       # https://pytest.org
-      # https://nose.readthedocs.io
+      - run:
+          name: run pytest
+          command: pytest
+
       - run:
           name: run django tests
           command: |
             . venv/bin/activate
+            python manage.py makemigrations
             python manage.py test
-
-      - run:
-          name: run pytest
-          command: pytest
 
       - store_artifacts:
           path: test-reports

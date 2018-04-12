@@ -15,7 +15,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'hinatan.jp']
+ALLOWED_HOSTS = ['localhost', 'backend.hinatan.jp']
 
 WSGI_APPLICATION = 'mainHP.wsgi.application'
 

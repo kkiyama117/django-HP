@@ -3,16 +3,19 @@ venv/
 db.sqlite3
 *.coverage
 *__pycache__/
-static
 *.pytest_cache
 *.tox
-!*__init__.py
-init.sh
 uwsgi.ini
+init.sh
+
+.env/production
+
+!*__init__.py
+
+!static/README.md
+static
 
 */migrations/
-!transfacils/migrations/__init__.py
-!main/migrations/__init__.py
 */fixtures
-.env/production
+
 locale/

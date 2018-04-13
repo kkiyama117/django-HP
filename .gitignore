@@ -3,8 +3,8 @@ venv/
 db.sqlite3
 *.coverage
 *__pycache__/
-*.pytest_cache
-*.tox
+*.pytest_cache/
+*.tox/
 uwsgi.ini
 init.sh
 
@@ -13,9 +13,9 @@ init.sh
 !*__init__.py
 
 !static/README.md
-static
+static/
 
 */migrations/
-*/fixtures
+*/fixtures/
 
 locale/

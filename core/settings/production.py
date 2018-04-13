@@ -17,7 +17,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'backend.hinatan.jp']
 
-WSGI_APPLICATION = 'mainHP.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 DATABASES = {

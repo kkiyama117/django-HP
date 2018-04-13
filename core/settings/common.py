@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'main',
     'transfacils',
     'rest_framework',
+    'tweetable',
 ]
 
 AUTH_USER_MODEL = 'main.User'
@@ -130,4 +131,3 @@ REST_FRAMEWORK = {
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-

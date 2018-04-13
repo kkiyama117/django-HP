@@ -33,6 +33,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.in
+            pip install -r requirements.development.in
 
       - save_cache:
           paths:
@@ -47,7 +48,7 @@ jobs:
           name: run pytest
           command: |
             . venv/bin/activate
-            pytest
+            pytest -v
 
       - run:
           name: run django tests

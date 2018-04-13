@@ -8,7 +8,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-WSGI_APPLICATION = 'mainHP.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {

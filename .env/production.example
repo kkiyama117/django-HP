@@ -1,4 +1,4 @@
-DJANGO_SETTINGS_MODULE="mainHP.settings.production"
+DJANGO_SETTINGS_MODULE="core.settings.production"
 SECRET_KEY='1o1o1o1o1o1o1o1o1o1o1o1o1o1o1o'
 DB_NAME='xxxx_db'
 DB_USER='user'

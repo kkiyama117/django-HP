@@ -1,5 +1,5 @@
 """
-WSGI config for mainHP project.
+WSGI config for core project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -13,9 +13,9 @@ from django.core.wsgi import get_wsgi_application
 
 if os.environ["ENVIRONMENT"] == "production" or\
         os.environ["ENVIRONMENT"] == "staging":
-    setting = "mainHP.settings.production"
+    setting = "core.settings.production"
 else:
-    setting = "mainHP.settings.development"
+    setting = "core.settings.development"
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", setting)
 

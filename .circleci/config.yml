@@ -50,13 +50,6 @@ jobs:
             . venv/bin/activate
             pytest -v
 
-      - run:
-          name: run django tests
-          command: |
-            . venv/bin/activate
-            python manage.py makemigrations
-            python manage.py test
-
       - store_artifacts:
           path: test-reports
           destination: test-reports

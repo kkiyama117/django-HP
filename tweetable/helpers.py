@@ -1,27 +1,47 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from environ import environ
-from requests_oauthlib import OAuth1Session
+from enum import Enum
+
+import twitter
+
+from lib import utils
 
 
+class REST(Enum):
+    GET = "GET"
+    POST = "POST"
 
-CK = '6aVCqjTroUzYmFlZfj830EjJY'  # Consumer Key
-CS = 'f52IftXxjbBIXHswa78MfAFZghg5mG99VIGHbLvAGgn8b8vAfO'  # Consumer Secret
-AT = '3246502376-51mC9RtUKr7F0hcLqFSUrlaTflfSn8mmzFddl6v'  # Access Token
-AS = 'jnpqnAEU4QzZ7yZ7aswjRPmtgO5mIqsWnKLbzeIE8xjuP'  # Accesss Token Secert
 
-# ツイート投稿用のURL
-url = "https://api.twitter.com/1.1/statuses/update.json"
+class KIND(Enum):
+    TWEETS = "statues"
+    POST = "post"
 
-# ツイート本文
-params = {"status": "Hello, World!"}
 
-# OAuth認証で POST method で投稿
-twitter = OAuth1Session(CK, CS, AT, AS)
-req = twitter.post(url, params=params)
+def get_tweet_api():
+    # TODO 外部依存しない方式を取る.
+    env = utils.get_data_from_env("twitter_api_key")
+    ck = env("CK")  # Consumer Key
+    cs = env("CS")  # Consumer Secret
+    at = env("AT")  # Access Token
+    ats = env("AS")  # Accesss Token Secert
+    api = twitter.Api(consumer_key=ck,
+                      consumer_secret=cs,
+                      access_token_key=at,
+                      access_token_secret=ats,
+                      input_encoding="utf-8")
 
-# レスポンスを確認
-if req.status_code == 200:
-    print("OK")
-else:
-    print("Error: %d" % req.status_code)
+    return api
+
+
+def get_tweet():
+    # ツイート本文
+    api = get_tweet_api()
+    statues = api.GetUserTimeline(api.VerifyCredentials().id, count=20)
+    for s in statues:
+        print(s.text)
+
+
+if __name__ == '__main__':
+    user2 = get_tweet_api().VerifyCredentials().AsDict()
+    for a, b in user2.items():
+        print(a, b)

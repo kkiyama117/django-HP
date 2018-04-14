@@ -131,6 +131,3 @@ REST_FRAMEWORK = {
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-
-# cerely
-CELERY_APP = "core"

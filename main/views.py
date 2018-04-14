@@ -10,10 +10,6 @@ def index(request):
     context = {
         'user': request.user,
     }
-    result = tasks.add.delay(3, 8)
-    while not result.ready():
-        print('spam')
-    print(result.get())
     return render(request, 'main/index.html', context)
 
 

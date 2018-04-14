@@ -38,3 +38,11 @@ REST_FRAMEWORK.update({
         'rest_framework.renderers.JSONRenderer',
     )
 })
+
+# celery
+CELERY_BIN = "celery"
+CELERY_BROKER_URL = env("REDIS_URL")
+CELERY_RESULT_BACKEND = env("REDIS_URL")
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'

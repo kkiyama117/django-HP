@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'main',
     'transfacils',
     'rest_framework',
+    'tweetable',
 ]
 
 AUTH_USER_MODEL = 'main.User'
@@ -131,3 +132,5 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
+# cerely
+CELERY_APP = "core"

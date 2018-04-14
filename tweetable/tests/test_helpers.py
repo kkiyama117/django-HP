@@ -14,4 +14,5 @@ class FunctionsTest:
     def get_tweet_api_test(self):
         time.sleep(0.1)
         api=get_tweet_api()
-        assert api.id == 984949286273073152
+        user=api.VerifyCredentials()
+        assert user.id == 984949286273073152

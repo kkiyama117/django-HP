@@ -10,3 +10,6 @@ psycopg2-binary
 pytest
 requests
 celery
+
+requests_oauthlib
+python-twitter

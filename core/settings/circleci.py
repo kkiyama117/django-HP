@@ -17,8 +17,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "circle_test",
         'USER': "root",
-        'PASSWORD': "root",
-        'HOST': "postgres://root@localhost:5432/circle_test?sslmode=disable",
+        'PASSWORD': "",
+        'HOST': "postgres://root@127.0.0.1:5432/circle_test?sslmode=disable",
         'PORT': '5432',
     }
 }

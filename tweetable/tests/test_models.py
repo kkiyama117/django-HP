@@ -23,3 +23,12 @@ class UserModelTest:
         except ValidationError as e:
             pytest.fail()
             print(e)
+
+    @pytest.mark.parametrize("test_name, test_user_name", [
+        pytest.param("6*9", ("a" * 100), ),
+        pytest.param(("a" * 100), "test", ),
+    ])
+    def test_field_with_error(self, test_name, test_user_name):
+        model = User(id=100, name=test_name, user_name=test_user_name)
+        with pytest.raises(ValidationError):
+            model.full_clean()

@@ -17,7 +17,7 @@ DATABASES = {
         'NAME': "circle_test",
         'USER': "root",
         'PASSWORD': "root",
-        'HOST': "postgres://root@localhost:5432/circle_test?sslmode=disable",
+        'HOST': "localhost",
         'PORT': '5432',
     }
 }

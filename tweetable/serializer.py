@@ -11,8 +11,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class TweetSerializer(serializers.ModelSerializer):
-    user = UserSerializer
     class Meta:
         model = Tweet
         fields = '__all__'
+        depth = 1
 

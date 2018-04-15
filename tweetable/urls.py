@@ -5,7 +5,7 @@ from tweetable.api import UserViewSet, TweetViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
-router.register(r'statuses', TweetViewSet)
+router.register(r'statues', TweetViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),

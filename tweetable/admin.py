@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import *
+
+
+class TrainAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(User)
+admin.site.register(Tweet)

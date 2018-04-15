@@ -1,22 +1,17 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import pytest
-import time
+
+from main.models import User
 
 
-class TestModel:
-    @pytest.mark.small
-    def test_1(self):
-        time.sleep(0.1)
-        assert "aaa" == "aaa"
+@pytest.mark.django_db
+class UserTest:
+    def setup(self):
+        # データを登録しないと表示されないので、事前に登録しておく
+        self.user = User.objects.create_user(email="test@test.com",
+                                             password="19980117",
+                                             first_name="木山", last_name="航平",
+                                             tel="00000000000")
+        self.user.save()
 
-    @pytest.mark.small
-    def test_2(self):
-        time.sleep(0.1)
-        assert "bbb" == "bbb"
-
-    @pytest.mark.large
-    def test_3(self):
-        time.sleep(10)
-        assert "a" == "a"
+    def test_add_user(self):
+        assert User.objects.all().count() == 1

@@ -15,4 +15,3 @@ class TweetSerializer(serializers.ModelSerializer):
         model = Tweet
         fields = '__all__'
         depth = 1
-

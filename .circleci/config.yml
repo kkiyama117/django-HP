@@ -46,6 +46,7 @@ jobs:
             python manage.py makemigrations
             python manage.py migrate
             pytest
+            codecov --token=0eaa123a-aec0-471f-adb9-796199c46098
 
       - store_artifacts:
           path: test-reports

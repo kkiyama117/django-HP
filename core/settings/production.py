@@ -1,14 +1,11 @@
-from environ import environ
-
+from lib import utils
 from .common import *
 
-env = environ.Env()
-env_base = environ.Path(__file__) - 3
+env = None
 if os.environ["ENVIRONMENT"] == "staging":
-    env_file = str(env_base.path(".env/staging"))
+    env = utils.get_data_from_env("staging")
 else:
-    env_file = str(env_base.path(".env/production"))
-env.read_env(env_file)
+    env = utils.get_data_from_env("production")
 
 SECRET_KEY = env("SECRET_KEY")
 

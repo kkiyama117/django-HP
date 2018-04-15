@@ -21,6 +21,7 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('main.urls')),
     path('trans/', include('transfacils.urls')),
+    path('tweets/', include('tweetable.urls')),
     path('admin/', admin.site.urls, name="admin"),
     path('api-auth/', include('rest_framework.urls',
                               namespace='rest_framework')),

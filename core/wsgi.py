@@ -11,9 +11,11 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-if os.environ["ENVIRONMENT"] == "production" or\
+if os.environ["ENVIRONMENT"] == "production" or \
         os.environ["ENVIRONMENT"] == "staging":
     setting = "core.settings.production"
+elif os.environ["DJANGO_SETTINGS_MODULE"] == "core.settings.circleci":
+    setting = os.environ["DJANGO_SETTINGS_MODULE"]
 else:
     setting = "core.settings.development"
 

@@ -6,6 +6,8 @@ from celery import Celery
 try:
     if os.environ["ENVIRONMENT"] in ("production", "staging"):
         setting = "core.settings.production"
+    elif os.environ["DJANGO_SETTINGS_MODULE"] == "core.settings.circleci":
+        setting = os.environ["DJANGO_SETTINGS_MODULE"]
 except KeyError:
     pass
 finally:

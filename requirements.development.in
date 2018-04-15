@@ -1,4 +1,5 @@
 django-webtest
+factory_boy
 pytest-django
 tox
 pytest

@@ -4,7 +4,6 @@ from .common import *
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1o1o1o1o1o1o1o1o1o1o1o1o1o1o1o1o1o'
 
-env = utils.get_data_from_env("circleci")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -17,8 +16,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "circle_test",
         'USER': "root",
-        'PASSWORD': "",
-        'HOST': "postgres://root@127.0.0.1:5432/circle_test?sslmode=disable",
+        'PASSWORD': "root",
+        'HOST': "postgres://root@localhost:5432/circle_test?sslmode=disable",
         'PORT': '5432',
     }
 }

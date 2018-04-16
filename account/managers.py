@@ -4,6 +4,15 @@ from django.db.models import QuerySet
 
 class UserQuerySet(QuerySet):
     def all_for_current_user(self, request):
+        """ Queryset for login user
+
+        Args:
+            request:
+
+        Returns:
+            queryset
+
+        """
         if request.user.is_superuser:
             return self
         elif not request.user.is_authenticated:

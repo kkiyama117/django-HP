@@ -10,7 +10,7 @@ urls: str = 'account.urls'
 class TestUrls(object):
     @pytest.mark.parametrize(('url', 'expected'), [
         ('/', {'func_name': 'index', 'kwargs': {}}),
-        ('/user/', {'func_name': 'user', 'kwargs': {}}),
+        ('/profile/', {'func_name': 'profile', 'kwargs': {}}),
     ])
     def test_valid(self, url, expected):
         func, args, kwargs = resolve(url)

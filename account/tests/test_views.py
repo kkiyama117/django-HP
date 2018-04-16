@@ -24,13 +24,13 @@ class ViewsTest(TestCase):
 
         assert response.status_code == 200
 
-    def test_user(self):
+    def test_profile(self):
         # データを登録しないと表示されないので、事前に登録しておく
         login_user = User.objects.create_user(email="test@test.com",
                                               password="19980117",
                                               first_name="木山", last_name="航平",
                                               tel="00000000000")
-        request = RequestFactory().get(reverse('account:user'))
+        request = RequestFactory().get(reverse('account:profile'))
         request.user = login_user
         response = profile(request)
 

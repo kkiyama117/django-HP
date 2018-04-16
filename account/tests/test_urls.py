@@ -1,7 +1,7 @@
 import pytest
 from django.urls import resolve, Resolver404
 
-urls: str = 'main.urls'
+urls: str = 'account.urls'
 
 
 @pytest.mark.tweetable

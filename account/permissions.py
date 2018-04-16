@@ -1,6 +1,6 @@
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
-from main.models import User
+from account.models import User
 
 
 class IsAdmin(BasePermission):

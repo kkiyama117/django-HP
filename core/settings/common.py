@@ -24,13 +24,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'account',
     'transfacils',
     'rest_framework',
     'tweetable',
 ]
 
-AUTH_USER_MODEL = 'main.User'
+AUTH_USER_MODEL = 'account.User'
 
 ROOT_URLCONF = 'core.urls'
 
@@ -50,7 +50,7 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
-        'DIRS': [],
+        'DIRS': ["templates/jinja2"],
         'APP_DIRS': True,
         'OPTIONS': {
             'environment': 'core.jinja2.environment',

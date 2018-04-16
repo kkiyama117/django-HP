@@ -5,8 +5,8 @@ import pytest
 from django.test import RequestFactory
 from django.urls import reverse
 
-from main.models import User
-from main.views import index, user
+from account.models import User
+from account.views import index, user
 
 
 @pytest.mark.django_db
@@ -18,7 +18,7 @@ class ViewsTest(TestCase):
                                               password="19980117",
                                               first_name="木山", last_name="航平",
                                               tel="00000000000")
-        request = RequestFactory().get(reverse('main:index'))
+        request = RequestFactory().get(reverse('account:index'))
         request.user = login_user
         response = index(request)
 
@@ -30,7 +30,7 @@ class ViewsTest(TestCase):
                                               password="19980117",
                                               first_name="木山", last_name="航平",
                                               tel="00000000000")
-        request = RequestFactory().get(reverse('main:user'))
+        request = RequestFactory().get(reverse('account:user'))
         request.user = login_user
         response = user(request)
 

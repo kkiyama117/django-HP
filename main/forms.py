@@ -1,6 +1,25 @@
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import UserChangeForm, UserCreationForm, \
+    AuthenticationForm
 
-from .utils import MyUserCreationForm
+from .models import User
+
+
+class MyUserChangeForm(UserChangeForm):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+
+class MyUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ('email', 'tel',)
+
+
+class MyAuthenticationForm(AuthenticationForm):
+    class Meta:
+        model = User
+        fields = ('email', 'tel')
 
 
 class RegisterForm(MyUserCreationForm):

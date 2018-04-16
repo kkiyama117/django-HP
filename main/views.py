@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 
-from .forms import RegisterForm
+from main import forms
 
 
 def index(request):
@@ -21,7 +21,7 @@ def user(request):
 
 
 def register(request):
-    form = RegisterForm(request.POST or None)
+    form = forms.RegisterForm(request.POST or None)
     context = {
         'form': form,
     }
@@ -30,7 +30,7 @@ def register(request):
 
 @require_POST
 def register_save(request):
-    form = RegisterForm(request.POST)
+    form = forms.RegisterForm(request.POST)
     if form.is_valid():
         form.save()
         return redirect('main:index')

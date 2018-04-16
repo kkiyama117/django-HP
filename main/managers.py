@@ -3,8 +3,11 @@ from django.db.models import QuerySet
 
 
 class UserQuerySet(QuerySet):
-    def only_user(self):
-        pass
+    def get_user(self, request):
+        if request.user.is_superuser:
+            return self
+        else:
+            return self.filter(id=request.user.id)
 
 
 class UserManager(BaseUserManager):

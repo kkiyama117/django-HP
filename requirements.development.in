@@ -1,7 +1,7 @@
+codecov
 django-webtest
 factory_boy
-pytest-django
-tox
 pytest
 pytest-cov
 pytest-django
+tox

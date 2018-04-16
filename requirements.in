@@ -1,4 +1,5 @@
 beautifulsoup4
+celery
 django
 django-debug-toolbar
 django-environ
@@ -8,8 +9,6 @@ lxml
 pillow
 psycopg2-binary
 pytest
-requests
-celery
-
-requests_oauthlib
 python-twitter
+requests
+requests_oauthlib

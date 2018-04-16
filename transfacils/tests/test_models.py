@@ -12,4 +12,4 @@ class RouteTest:
         pass
 
     def test_add_routes(self):
-        assert Route.objects.all().count() == 1
+        assert Route.objects.all().count() == 0

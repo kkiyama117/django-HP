@@ -7,11 +7,13 @@ from main.models import User
 class UserTest:
     def setup(self):
         # データを登録しないと表示されないので、事前に登録しておく
-        self.user = User.objects.create_user(email="test@test.com",
-                                             password="19980117",
-                                             first_name="木山", last_name="航平",
-                                             tel="00000000000")
-        self.user.save()
+        self.super_user = User.objects.create_user(
+            email="k.kiyama117@gmail.com",
+            password="password0123",
+            first_name="木山",
+            last_name="航平",
+            tel="08026244315")
+        self.super_user.save()
 
     def test_add_user(self):
         assert User.objects.all().count() == 1

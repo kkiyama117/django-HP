@@ -14,6 +14,11 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
     def get_queryset(self):
+        """ スーパーユーザーかによって判断
+
+        Returns:
+            クエリセット
+        """
         if self.request.user.is_superuser:
             return User.objects.all()
         return User.objects.filter(id=self.request.user.id)

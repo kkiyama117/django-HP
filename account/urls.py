@@ -14,7 +14,7 @@ router.register(r'users', UserViewSet, base_name="user")
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('user/', views.user, name='user'),
+    path('profile/', views.profile, name='profile'),
     path('register/', views.register, name='register'),
     path('register_save/', views.register_save, name='register_save'),
     path(

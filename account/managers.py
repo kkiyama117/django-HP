@@ -3,9 +3,11 @@ from django.db.models import QuerySet
 
 
 class UserQuerySet(QuerySet):
-    def get_user(self, request):
+    def all_for_current_user(self, request):
         if request.user.is_superuser:
             return self
+        elif not request.user.is_authenticated:
+            return None
         else:
             return self.filter(id=request.user.id)
 

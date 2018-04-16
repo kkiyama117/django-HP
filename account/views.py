@@ -13,11 +13,11 @@ def index(request):
 
 
 @login_required
-def user(request):
+def profile(request):
     context = {
         'user': request.user,
     }
-    return render(request, 'account/user.html', context)
+    return render(request, 'account/profile.html', context)
 
 
 def register(request):

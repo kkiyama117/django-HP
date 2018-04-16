@@ -6,7 +6,7 @@ from django.test import RequestFactory
 from django.urls import reverse
 
 from account.models import User
-from account.views import index, user
+from account.views import index, profile
 
 
 @pytest.mark.django_db
@@ -32,6 +32,6 @@ class ViewsTest(TestCase):
                                               tel="00000000000")
         request = RequestFactory().get(reverse('account:user'))
         request.user = login_user
-        response = user(request)
+        response = profile(request)
 
         assert response.status_code == 200

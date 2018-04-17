@@ -9,6 +9,7 @@ def gen_helper(url):
     return BeautifulSoup(r.text, 'lxml-xml')
 
 
+# LINE
 def lines_generator(prefecture_cd=26):
     """路線図一覧
 
@@ -35,25 +36,7 @@ def get_line_data(line_cd=33001):
             "line_name": line.find("line_name").string}
 
 
-def line_data_generator(line_cd=33001):
-    url = "http://www.ekidata.jp/api/n/{0}.xml".format(line_cd)
-    line = gen_helper(url)
-
-    def get_near_station_in_line(station_cd):
-        next_station = None
-        previous_station = None
-        for station_join in line.find_all("station_join"):
-            if station_join.find(name="station_cd1", text=str(station_cd)):
-                previous_station = int(station_join.find("station_cd2").string)
-            if station_join.find(name="station_cd2", text=str(station_cd)):
-                next_station = int(station_join.find("station_cd1").string)
-        return {"next": next_station, "previous": previous_station}
-
-    for station in line_station_generator(line_cd):
-        near_dict = get_near_station_in_line(station["station_cd"])
-        station.update(near_dict)
-        yield station
-
+# LINE -> STATION
 
 def line_station_generator(line_cd=33001):
     """路線中の駅のジェネレーター
@@ -72,6 +55,28 @@ def line_station_generator(line_cd=33001):
         station_cd = int(station.find("station_cd").string)
         yield get_station_data(station_cd)
 
+
+def line_data_generator(line_cd=33001):
+    for station in line_station_generator(line_cd):
+        near_dict = get_near_station_in_line(station["station_cd"])
+        station.update(near_dict)
+        yield station
+
+
+def get_near_station_in_line(line_cd, station_cd):
+    url = "http://www.ekidata.jp/api/n/{0}.xml".format(line_cd)
+    line = gen_helper(url)
+    next_station = None
+    previous_station = None
+    for station_join in line.find_all("station_join"):
+        if station_join.find(name="station_cd1", text=str(station_cd)):
+            previous_station = int(station_join.find("station_cd2").string)
+        if station_join.find(name="station_cd2", text=str(station_cd)):
+            next_station = int(station_join.find("station_cd1").string)
+    return {"next": next_station, "previous": previous_station}
+
+
+# STATION
 
 def get_station_data(station_cd):
     """駅のデータの取得
@@ -93,6 +98,8 @@ def get_station_data(station_cd):
                     "station_g_cd": station_g_cd, "line_cd": line_cd}
     return station_info
 
+
+# STATION -> STATIONS
 
 def get_station_route_list(station_id):
     url = "http://www.ekidata.jp/api/g/{0}.xml".format(station_id)

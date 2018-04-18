@@ -11,7 +11,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     """カスタムユーザーモデル."""
 
     email = models.EmailField(_('email address'), unique=True)
-    password = models.CharField(_('password'), max_length=256)
     first_name = models.CharField(_('first name'), max_length=10, blank=False)
     last_name = models.CharField(_('last name'), max_length=10, blank=False)
     tel = models.CharField(_('tel number'), blank=False,

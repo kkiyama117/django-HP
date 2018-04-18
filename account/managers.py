@@ -3,22 +3,10 @@ from django.db.models import QuerySet
 
 
 class UserQuerySet(QuerySet):
-    def all_for_current_user(self, request):
-        """ Queryset for login user
-
-        Args:
-            request:
-
-        Returns:
-            queryset
-
-        """
-        if request.user.is_superuser:
+    def all_for_instance(self, instance):
+        if instance.is_superuser:
             return self
-        elif not request.user.is_authenticated:
-            return None
-        else:
-            return self.filter(id=request.user.id)
+        return self.filter(id=instance.id)
 
 
 class UserManager(BaseUserManager):

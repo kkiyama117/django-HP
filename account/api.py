@@ -19,4 +19,7 @@ class UserViewSet(viewsets.ModelViewSet):
         Returns:
             クエリセット
         """
-        return User.objects.all_for_current_user(self.request)
+        if self.request.user.is_superuser:
+            return User.objects.all()
+        else:
+            return User.objects.all_for_instance(self.request.user)

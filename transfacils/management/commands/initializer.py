@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 
-import transfacils.initializer
+import transfacils.helpers.initializer
+from transfacils import helpers
 
 
 class Command(BaseCommand):
@@ -19,4 +20,4 @@ class Command(BaseCommand):
         # )
 
     def handle(self, *args, **options):
-        transfacils.initializer.initialize()
+        helpers.initializer.initialize()

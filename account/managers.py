@@ -3,11 +3,10 @@ from django.db.models import QuerySet
 
 
 class UserQuerySet(QuerySet):
-    def get_user(self, request):
-        if request.user.is_superuser:
+    def all_for_instance(self, instance):
+        if instance.is_superuser:
             return self
-        else:
-            return self.filter(id=request.user.id)
+        return self.filter(id=instance.id)
 
 
 class UserManager(BaseUserManager):

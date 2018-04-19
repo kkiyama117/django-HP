@@ -1,5 +1,6 @@
 codecov
 django-webtest
+faker
 factory_boy
 pytest
 pytest-cov

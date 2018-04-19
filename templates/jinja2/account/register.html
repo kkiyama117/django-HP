@@ -1,7 +1,7 @@
-{% extends "main/base.html" %}
+{% extends "account/base.html" %}
 {% block content %}
 
-    <form class="my-form" action="{{ url('main:register_save') }}"
+    <form class="my-form" action="{{ url('account:register_save') }}"
           method="POST">
         <div class="form-group">
             <label for="id_username">email</label>

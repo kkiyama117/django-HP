@@ -6,7 +6,7 @@ from .forms import LoginForm
 from rest_framework import routers
 from .api import UserViewSet
 
-app_name = 'main'
+app_name = 'account'
 
 router = routers.DefaultRouter()
 
@@ -14,20 +14,20 @@ router.register(r'users', UserViewSet, base_name="user")
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('user/', views.user, name='user'),
+    path('profile/', views.profile, name='profile'),
     path('register/', views.register, name='register'),
     path('register_save/', views.register_save, name='register_save'),
     path(
         'login/',
         auth_views.login,
-        {'template_name': 'main/login.html',
+        {'template_name': 'account/login.html',
          'authentication_form': LoginForm},
         name='login'
     ),
     path(
         'logout/',
         auth_views.logout,
-        {'template_name': 'main/index.html'},
+        {'template_name': 'account/index.html'},
         name='logout'
     ),
     path('api/', include(router.urls)),

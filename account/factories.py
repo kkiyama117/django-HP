@@ -4,7 +4,7 @@ from account import models
 from django.contrib.auth.hashers import make_password
 
 
-class UserFactory(factory.Factory):
+class UserFactory(factory.DjangoModelFactory):
     class Meta:
         model = models.User
 
@@ -21,3 +21,12 @@ class SuperUserFactory(UserFactory):
 
     is_staff = True
     is_superuser = True
+
+
+class UserLoginDataFactory(factory.Factory):
+    """作るかわからない. 不要なら消す"""
+    pass
+
+
+class UserDataFactory(UserLoginDataFactory):
+    pass

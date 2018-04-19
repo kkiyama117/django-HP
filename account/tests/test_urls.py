@@ -4,8 +4,6 @@ from django.urls import resolve, Resolver404
 urls: str = 'account.urls'
 
 
-@pytest.mark.tweetable
-@pytest.mark.tweetable_urls
 @pytest.mark.urls(urls)
 class TestUrls(object):
     @pytest.mark.parametrize(('url', 'expected'), [

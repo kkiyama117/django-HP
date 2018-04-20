@@ -18,6 +18,7 @@ docs/build/
 static/
 
 */migrations/
+!*/fixtures/test_data.json
 */fixtures/
 
 locale/

@@ -6,39 +6,32 @@
 ===========
 django-HP
 ===========
-my backend server with django REST Framework
 
 .. image:: https://pyup.io/repos/github/kkiyama117/django-HP/shield.svg
-     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-     :alt: Updates
+      :target: https://pyup.io/repos/github/kkiyama117/django-HP/
+      :alt: Updates
+      
 .. image:: https://pyup.io/repos/github/kkiyama117/django-HP/python-3-shield.svg
-     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-     :alt: Python 3
-
-===========
- tests
-===========
-circleci:
+      :target: https://pyup.io/repos/github/kkiyama117/django-HP/
+      :alt: Python 3
 
 .. image:: https://circleci.com/gh/kkiyama117/django-HP.svg?style=svg
-    :target: https://circleci.com/gh/kkiyama117/django-HP
+      :target: https://circleci.com/gh/kkiyama117/django-HP
 
 .. image:: https://codecov.io/gh/kkiyama117/django-HP/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/kkiyama117/django-HP
+      :target: https://codecov.io/gh/kkiyama117/django-HP
 
 .. image:: https://circleci.com/gh/kkiyama117/django-HP/tree/develop.svg?style=svg
-    :target: https://circleci.com/gh/kkiyama117/django-HP/tree/develop
+      :target: https://circleci.com/gh/kkiyama117/django-HP/tree/develop
 
 .. image:: https://codecov.io/gh/kkiyama117/django-HP/branch/develop/graph/badge.svg
-  :target: https://codecov.io/gh/kkiyama117/django-HP/develop
-
-travisci:
+      :target: https://codecov.io/gh/kkiyama117/django-HP/develop
 
 .. image:: https://travis-ci.org/kkiyama117/django-HP.svg?branch=master
-    :target: https://travis-ci.org/kkiyama117/django-HP
+      :target: https://travis-ci.org/kkiyama117/django-HP
 
 .. image:: https://travis-ci.org/kkiyama117/django-HP.svg?branch=develop
-    :target: https://travis-ci.org/kkiyama117/django-HP
+      :target: https://travis-ci.org/kkiyama117/django-HP
 
 ==========
 LICENSE

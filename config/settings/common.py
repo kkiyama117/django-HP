@@ -165,3 +165,14 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
                     default='django.core.mail.backends.smtp.EmailBackend')
+
+# ADMIN
+# ------------------------------------------------------------------------------
+# Django Admin URL regex.
+ADMIN_URL = r'^admin/'
+# https://docs.djangoproject.com/en/dev/ref/settings/#admins
+ADMINS = [
+    ("""@kkiyama117""", 'k.kiyama117@gmail.com'),
+]
+# https://docs.djangoproject.com/en/dev/ref/settings/#managers
+MANAGERS = ADMINS

@@ -1,8 +1,10 @@
+#!/usr/bin/python
 from setuptools import setup
 
 setup(
     name='mainHP',
     version='0.3',
+    description='Household account book in times of day format',
     packages=['lib', 'lib.tests', 'config', 'account', 'account.tests',
               'account.management', 'account.management.commands',
               'tweetable', 'tweetable.tests',

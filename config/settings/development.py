@@ -8,6 +8,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
+MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware', )
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

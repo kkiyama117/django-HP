@@ -1,7 +1,0 @@
-codecov
-django-webtest
-factory_boy
-pytest
-pytest-cov
-pytest-django
-tox

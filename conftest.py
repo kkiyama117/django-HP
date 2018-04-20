@@ -9,6 +9,13 @@ import pytest
 
 @pytest.fixture(scope='function')
 def app(request):
+    """ Webtest の時に使う
+    Args:
+        request:
+
+    Returns:
+
+    """
     wtm = django_webtest.WebTestMixin()
     wtm._patch_settings()
     request.addfinalizer(wtm._unpatch_settings)
@@ -24,7 +31,4 @@ def pytest_unconfigure(config):
     """pytest の実行時に一度だけ実行される
 
     """
-    print('subprocess')
-    print('manage.py check')
     subprocess.run(['python', '-Wd', 'manage.py', 'check'], shell=True)
-    print('subprocess done')

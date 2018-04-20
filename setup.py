@@ -3,8 +3,8 @@ from setuptools import setup
 setup(
     name='mainHP',
     version='0.3',
-    packages=['lib', 'lib.tests', 'core', 'main', 'main.tests',
-              'main.management', 'main.management.commands',
+    packages=['lib', 'lib.tests', 'config', 'account', 'account.tests',
+              'account.management', 'account.management.commands',
               'tweetable', 'tweetable.tests',
               'transfacils', 'transfacils.tests', 'transfacils.helpers', ],
     url='http://hinatan.jp',

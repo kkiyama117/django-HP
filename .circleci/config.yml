@@ -5,10 +5,11 @@
 version: 2
 jobs:
   build:
+    parallelism: 1
     docker:
       - image: circleci/python:3.6.1
         environment:
-          DJANGO_SETTINGS_MODULE: core.settings.circleci
+#          DJANGO_SETTINGS_MODULE: core.settings.circleci
       - image: circleci/postgres:9.6.2
         environment:
           POSTGRES_USER: root
@@ -22,7 +23,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "requirements.in" }}
+          - v1-dependencies-{{ checksum "requirements/local.txt" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
@@ -31,18 +32,18 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements.in
-            pip install -r requirements.development.in
+            pip install -r requirements/local.txt
 
       - save_cache:
           paths:
             - ./venv
-          key: v1-dependencies-{{ checksum "requirements.in" }}
+          key: v1-dependencies-{{ checksum "requirements/local.txt" }}
 
       - run:
           name: run pytest
           command: |
             . venv/bin/activate
+            python manage.py makemigrations account
             python manage.py makemigrations
             python manage.py migrate
             pytest

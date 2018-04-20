@@ -1,3 +1,4 @@
+import json
 import os
 
 from transfacils.helpers.get_trans_api_data import line_data_generator, \
@@ -8,12 +9,9 @@ def initialize():
     initialize_lines_db()
 
 
-def initialize_lines_db():
-    import json
-
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(base_dir, "../fixtures/initial_data.json"),
-              "w") as file:
+def initialize_lines_db(filename: str = "initial_data.json"):
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    with open(os.path.join(base_dir,"fixtures/", filename), "w") as file:
         data_list = initialize_line_data()
         json.dump(data_list, file, sort_keys=True, ensure_ascii=False,
                   indent=4)

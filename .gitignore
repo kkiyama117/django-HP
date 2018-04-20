@@ -19,6 +19,6 @@ static/
 
 */migrations/
 !*/fixtures/test_data.json
-#*/fixtures/
+*/fixtures/
 
 locale/

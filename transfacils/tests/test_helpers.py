@@ -1,6 +1,6 @@
 import pytest
 
-from transfacils.helpers import get_trans_api_data
+from transfacils.helpers import get_trans_api_data, initializer
 
 
 class GetAPIDataTest:
@@ -19,3 +19,8 @@ class GetAPIDataTest:
         station_data = get_trans_api_data.get_station_data(station_cd)
         assert station_data["station_cd"] == station_cd
         assert station_data["station_name"] == station_name
+
+
+class InitializerTest:
+    def test_initialize_db(self):
+        initializer.initialize_db("test_data.json")

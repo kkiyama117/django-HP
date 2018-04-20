@@ -18,5 +18,7 @@ def env_file_setting():
         return get_data_from_env("staging")
     elif "production" in env_name:
         return get_data_from_env("production")
+    elif "test" in env_name:
+        return get_data_from_env("test")
     else:
         return get_data_from_env("local")

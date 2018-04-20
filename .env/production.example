@@ -1,5 +1,5 @@
-DJANGO_SETTINGS_MODULE="config.settings.production"
 SECRET_KEY='1o1o1o1o1o1o1o1o1o1o1o1o1o1o1o'
+DJANGO_DEBUG=False
 DB_NAME='xxxx_db'
 DB_USER='user'
 DB_PASS='password'

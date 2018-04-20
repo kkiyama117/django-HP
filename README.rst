@@ -27,8 +27,8 @@ Nothing.
 
 LICENSE
 ==========
-未定ですが今のところ商用利用禁止です。
-著作権は私, @kkiyama117 にあります。
+APACHE LICENSE version 2.0 です.
+私, @kkiyama117 にあります.
 
 .. link and refs
 

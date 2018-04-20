@@ -7,7 +7,7 @@ django-HP
 
 .. class:: no-web no-pdf
 
-|pyup| |Dependency| |codecrimate|
+|pyup| |Dependency| |codeclimate|
 
 =======  ============  ============  ==============
 branch   circle ci     travis ci     coverage

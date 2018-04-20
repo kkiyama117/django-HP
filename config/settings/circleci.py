@@ -25,5 +25,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),
                            os.path.abspath("static"))
 
 # celery
-CELERY_BIN = "venv/bin/celery"
+CELERY_BIN = ".venv/bin/celery"
 CELERY_TASK_ALWAYS_EAGER = True

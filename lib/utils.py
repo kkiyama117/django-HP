@@ -13,10 +13,12 @@ def get_data_from_env(filename):
 
 
 def env_file_setting():
-    env_name = os.environ.get("DJANGO_SETTINGS_MODULE")
+    env_name = os.environ.get("DJANGO_SETTINGS_MODULE","")
     if "staging" in env_name:
         return get_data_from_env("staging")
     elif "production" in env_name:
         return get_data_from_env("production")
+    elif "test" in env_name:
+        return get_data_from_env("test")
     else:
         return get_data_from_env("local")

@@ -21,5 +21,3 @@ static/
 */fixtures/
 
 locale/
-
-.env/twitter_api_key

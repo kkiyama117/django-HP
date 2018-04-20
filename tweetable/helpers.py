@@ -19,11 +19,11 @@ class KIND(Enum):
 
 def get_tweet_api():
     # TODO 外部依存しない方式を取る.
-    env = utils.get_data_from_env("twitter_api_key")
-    ck = env("CK")  # Consumer Key
-    cs = env("CS")  # Consumer Secret
-    at = env("AT")  # Access Token
-    ats = env("AS")  # Accesss Token Secert
+    env = utils.env_file_setting()
+    ck = env("TWITTER_CK")  # Consumer Key
+    cs = env("TWITTER_CS")  # Consumer Secret
+    at = env("TWITTER_AT")  # Access Token
+    ats = env("TWITTER_AS")  # Accesss Token Secert
     api = twitter.Api(consumer_key=ck,
                       consumer_secret=cs,
                       access_token_key=at,

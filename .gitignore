@@ -8,6 +8,8 @@ db.sqlite3
 uwsgi.ini
 init.sh
 
+docs/build/
+
 .env/production
 
 !*__init__.py

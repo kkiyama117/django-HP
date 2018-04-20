@@ -22,8 +22,7 @@ env = utils.env_file_setting()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env.bool('DJANGO_DEBUG', False)
 
 # GENERAL
 # ------------------------------------------------------------------------------

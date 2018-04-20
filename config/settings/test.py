@@ -16,5 +16,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),
 INTERNAL_IPS = "127.0.0.1"
 
 # celery
-CELERY_BIN = "venv/bin/celery"
+CELERY_BIN = ".venv/bin/celery"
 CELERY_TASK_ALWAYS_EAGER = True

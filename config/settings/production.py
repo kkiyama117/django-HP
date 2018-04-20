@@ -1,20 +1,12 @@
 from lib import utils
 from .common import *
 
-env = None
-if os.environ["ENVIRONMENT"] == "staging":
-    env = utils.get_data_from_env("staging")
-else:
-    env = utils.get_data_from_env("production")
-
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'backend.hinatan.jp']
-
-WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 DATABASES = {
@@ -28,7 +20,6 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = '/static/'
 
 REST_FRAMEWORK.update({
     'DEFAULT_RENDERER_CLASSES': (

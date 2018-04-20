@@ -8,15 +8,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-WSGI_APPLICATION = 'config.wsgi.application'
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-INSTALLED_APPS.append('debug_toolbar')
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),
                            os.path.abspath("static"))
 

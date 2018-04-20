@@ -2,16 +2,11 @@
 import os
 import sys
 
-try:
-    if os.environ["ENVIRONMENT"] in ("production", "staging"):
-        setting = "config.settings.production"
-except KeyError:
-    pass
-finally:
-    setting = setting if 'setting' in locals() else "config.settings.development"
+from lib import utils
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", setting)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE",
+                          "config.settings.development")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

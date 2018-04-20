@@ -3,6 +3,7 @@ from .common import *
 ALLOWED_HOSTS = ['localhost']
 
 MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware', )
+INSTALLED_APPS.append('debug_toolbar', )
 
 DATABASES = {
     'default': {

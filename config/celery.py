@@ -5,13 +5,13 @@ from celery import Celery
 # set the default Django settings module for the 'celery' program.
 try:
     if os.environ["ENVIRONMENT"] in ("production", "staging"):
-        setting = "core.settings.production"
-    elif os.environ["DJANGO_SETTINGS_MODULE"] == "core.settings.circleci":
+        setting = "config.settings.production"
+    elif os.environ["DJANGO_SETTINGS_MODULE"] == "config.settings.circleci":
         setting = os.environ["DJANGO_SETTINGS_MODULE"]
 except KeyError:
     pass
 finally:
-    setting = setting if 'setting' in locals() else "core.settings.development"
+    setting = setting if 'setting' in locals() else "config.settings.development"
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', setting)
 
 app = Celery('core')

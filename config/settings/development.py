@@ -1,4 +1,3 @@
-from lib import utils
 from .common import *
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -9,20 +8,19 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-WSGI_APPLICATION = 'core.wsgi.application'
-# Database
+WSGI_APPLICATION = 'config.wsgi.application'
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "circle_test",
-        'USER': "root",
-        'PASSWORD': "root",
-        'HOST': "localhost",
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+INSTALLED_APPS.append('debug_toolbar')
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),
                            os.path.abspath("static"))
+
+INTERNAL_IPS = "127.0.0.1"
 
 # celery
 CELERY_BIN = "venv/bin/celery"

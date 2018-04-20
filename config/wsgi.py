@@ -1,5 +1,5 @@
 """
-WSGI config for core project.
+WSGI config for config project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -13,11 +13,11 @@ from django.core.wsgi import get_wsgi_application
 
 if os.environ["ENVIRONMENT"] == "production" or \
         os.environ["ENVIRONMENT"] == "staging":
-    setting = "core.settings.production"
-elif os.environ["DJANGO_SETTINGS_MODULE"] == "core.settings.circleci":
+    setting = "config.settings.production"
+elif os.environ["DJANGO_SETTINGS_MODULE"] == "config.settings.circleci":
     setting = os.environ["DJANGO_SETTINGS_MODULE"]
 else:
-    setting = "core.settings.development"
+    setting = "config.settings.development"
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", setting)
 

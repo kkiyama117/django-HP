@@ -1,8 +1,13 @@
+-r ./base.in
+
 codecov
+django-debug-toolbar
 django-webtest
 faker
 factory_boy
 pytest
 pytest-cov
 pytest-django
+pytest-sugar
+django-coverage-plugin
 tox

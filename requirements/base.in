@@ -1,14 +1,12 @@
 beautifulsoup4
 celery
 django
-django-debug-toolbar
 django-environ
 djangorestframework
 Jinja2
 lxml
 pillow
 psycopg2-binary
-pytest
 python-twitter
 requests
 requests_oauthlib

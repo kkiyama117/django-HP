@@ -4,11 +4,11 @@ import sys
 
 try:
     if os.environ["ENVIRONMENT"] in ("production", "staging"):
-        setting = "core.settings.production"
+        setting = "config.settings.production"
 except KeyError:
     pass
 finally:
-    setting = setting if 'setting' in locals() else "core.settings.development"
+    setting = setting if 'setting' in locals() else "config.settings.development"
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", setting)

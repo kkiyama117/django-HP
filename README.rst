@@ -6,11 +6,15 @@
 ===========
 django-HP
 ===========
++------------------------+------------+----------+
+| Branches               | master     | develop  |
+| (header rows optional) |            |          |
++========================+============+==========+
+| circle ci              | column 2   | column 3 |
++------------------------+------------+----------+
+| travis ci              | ...        | ...      |
++------------------------+------------+----------+
 
-.. image:: https://pyup.io/repos/github/kkiyama117/django-HP/shield.svg
-      :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-      :alt: Updates
-      
 .. image:: https://pyup.io/repos/github/kkiyama117/django-HP/python-3-shield.svg
       :target: https://pyup.io/repos/github/kkiyama117/django-HP/
       :alt: Python 3

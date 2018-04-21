@@ -1,5 +1,6 @@
 """Pytest のフック
 """
+import os
 import subprocess
 
 # -*- coding: utf-8 -*-
@@ -22,6 +23,17 @@ def app(request):
     return django_webtest.DjangoTestApp()
 
 
+@pytest.fixture(scope='module', autouse=True)
+def is_omit_test():
+    env_test = os.environ.get("DO_ALL_TEST")
+    if env_test == "True":
+        print("DO_MINIMAL_TEST")
+        yield False
+    else:
+        print("DO_ALL_TEST")
+        yield True
+
+
 def pytest_collection_modifyitems(items):
     for item in items:
         item.keywords['django_db'] = pytest.mark.django_db
@@ -32,3 +44,4 @@ def pytest_unconfigure(config):
 
     """
     subprocess.run(['python', '-Wd', 'manage.py', 'check'], shell=True)
+    print("manage.py check done")

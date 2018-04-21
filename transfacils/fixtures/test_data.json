@@ -1,7 +1,7 @@
 [
     {
         "fields": {
-            "kind": "train",
+            "kind": "TRAIN",
             "name": "京阪本線"
         },
         "model": "transfacils.route",

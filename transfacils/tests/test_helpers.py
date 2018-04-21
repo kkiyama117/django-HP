@@ -1,5 +1,8 @@
+import os
+
 import pytest
 
+from conftest import is_omit_test
 from transfacils.helpers import get_trans_api_data, initializer
 
 
@@ -22,5 +25,13 @@ class GetAPIDataTest:
 
 
 class InitializerTest:
+
+    @pytest.mark.skipif(is_omit_test() is True, reason='not all test')
     def test_initialize_db(self):
-        initializer.initialize_db("test_data.json")
+        initializer.initialize_lines_db("test_data2.json")
+        base_dir = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            "fixtures")
+        with open(os.path.join(base_dir, "test_data.json"), "r") as f1, open(
+                os.path.join(base_dir, "test_data2.json"), "r") as f2:
+            assert f1.read() == f2.read()

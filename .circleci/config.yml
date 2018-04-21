@@ -42,7 +42,7 @@ jobs:
       - run:
           name: run pytest
           command: |
-            . venv/bin/activate
+            . .venv/bin/activate
             python manage.py makemigrations account
             python manage.py makemigrations
             python manage.py migrate

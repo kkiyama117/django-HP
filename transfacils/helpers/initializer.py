@@ -6,10 +6,6 @@ from transfacils.helpers.get_trans_api_data import line_data_generator, \
     get_line_data
 
 
-def initialize():
-    initialize_lines_db()
-
-
 def initialize_lines_db(filename: str = "initial_data.json"):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     with open(os.path.join(base_dir, "fixtures/", filename), "w") as file:

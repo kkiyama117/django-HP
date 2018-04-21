@@ -25,13 +25,15 @@ def app(request):
 
 @pytest.fixture(scope='module', autouse=True)
 def is_omit_test():
-    env_test = os.environ.get("DO_ALL_TEST")
+    env_test = os.environ.get("DO_ALL_TEST", "False")
     if env_test == "True":
         print("DO_MINIMAL_TEST")
-        yield False
-    else:
+        return False
+    elif env_test == "False":
         print("DO_ALL_TEST")
-        yield True
+        return True
+    else:
+        raise ValueError
 
 
 def pytest_collection_modifyitems(items):

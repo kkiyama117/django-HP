@@ -20,4 +20,4 @@ class Command(BaseCommand):
         # )
 
     def handle(self, *args, **options):
-        helpers.initializer.initialize()
+        helpers.initializer.initialize_lines_db()

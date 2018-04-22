@@ -58,7 +58,7 @@ def line_station_generator(line_cd=33001):
 
 def line_data_generator(line_cd=33001):
     for station in line_station_generator(line_cd):
-        near_dict = get_near_station_in_line(station["station_cd"])
+        near_dict = get_near_station_in_line(line_cd, station["station_cd"])
         station.update(near_dict)
         yield station
 

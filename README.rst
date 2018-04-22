@@ -7,7 +7,7 @@ django-HP
 
 .. class:: no-web no-pdf
 
-|pyup| |Dependency| |codeclimate|
+|pyup| |codeclimate|
 
 =======  ============  ============  ==============
 branch   circle ci     travis ci     coverage
@@ -27,8 +27,8 @@ Nothing.
 
 LICENSE
 ==========
-未定ですが今のところ商用利用禁止です。
-著作権は私, @kkiyama117 にあります。
+APACHE LICENSE version 2.0 です.
+私, @kkiyama117 にあります.
 
 .. link and refs
 
@@ -53,9 +53,6 @@ LICENSE
 
 .. |travis-dev| image:: https://travis-ci.org/kkiyama117/django-HP.svg?branch=develop
       :target: https://travis-ci.org/kkiyama117/django-HP
-
-.. |Dependency| image:: https://beta.gemnasium.com/badges/github.com/kkiyama117/django-HP.svg
-   :target: https://beta.gemnasium.com/projects/github.com/kkiyama117/django-HP
 
 .. |codeclimate| image:: https://api.codeclimate.com/v1/badges/d503401481e67a0d5226/maintainability
    :target: https://codeclimate.com/github/kkiyama117/django-HP/maintainability

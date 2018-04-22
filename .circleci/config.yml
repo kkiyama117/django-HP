@@ -30,19 +30,19 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
+            python3 -m venv .venv
+            . .venv/bin/activate
             pip install -r requirements/local.txt
 
       - save_cache:
           paths:
-            - ./venv
+            - ./.venv
           key: v1-dependencies-{{ checksum "requirements/local.txt" }}
 
       - run:
           name: run pytest
           command: |
-            . venv/bin/activate
+            . .venv/bin/activate
             python manage.py makemigrations account
             python manage.py makemigrations
             python manage.py migrate

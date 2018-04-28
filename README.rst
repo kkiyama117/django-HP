@@ -35,11 +35,9 @@ APACHE LICENSE version 2.0 です.
 
 .. |pyup| image:: https://pyup.io/repos/github/kkiyama117/django-HP/shield.svg
     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-    :alt: Updates
 
 .. |pyup-python3| image:: https://pyup.io/repos/github/kkiyama117/django-HP/python-3-shield.svg
     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-    :alt: Python 3
 
 .. |circle| image:: https://circleci.com/gh/kkiyama117/django-HP.svg?style=svg
     :target: https://circleci.com/gh/kkiyama117/django-HP

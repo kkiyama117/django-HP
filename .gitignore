@@ -5,6 +5,7 @@ db.sqlite3
 *__pycache__/
 *.pytest_cache/
 *.tox/
+*.egg-info/
 uwsgi.ini
 init.sh
 

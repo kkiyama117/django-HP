@@ -2,12 +2,13 @@
 sphinx-quickstart on Fri Apr 20 16:21:46 2018.
 You can adapt this file completely to your liking, but it should at least
 contain the root `toctree` directive.
+
 django-HP
 ##########
 
 .. class:: no-web no-pdf
 
-|pyup| |pyup-python|  |codeclimate|
+|pyup| |pyup-python3| |codeclimate|
 
 =======  ============  ============  ==============
 branch   circle ci     travis ci     coverage
@@ -36,7 +37,6 @@ APACHE LICENSE version 2.0 です.
     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
      :alt: Updates
 
-
 .. |pyup-python3| image:: https://pyup.io/repos/github/kkiyama117/django-HP/python-3-shield.svg
     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
       :alt: Python 3
@@ -61,4 +61,4 @@ APACHE LICENSE version 2.0 です.
 
 .. |codeclimate| image:: https://api.codeclimate.com/v1/badges/d503401481e67a0d5226/maintainability
     :target: https://codeclimate.com/github/kkiyama117/django-HP/maintainability
-   :alt: Maintainability
+    :alt: Maintainability

@@ -1,7 +1,7 @@
 .. hinatan documentation master file, created by
-   sphinx-quickstart on Fri Apr 20 16:21:46 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+sphinx-quickstart on Fri Apr 20 16:21:46 2018.
+You can adapt this file completely to your liking, but it should at least
+contain the root `toctree` directive.
 
 django-HP
 ##########
@@ -61,4 +61,4 @@ APACHE LICENSE version 2.0 です.
 
 .. |codeclimate| image:: https://api.codeclimate.com/v1/badges/d503401481e67a0d5226/maintainability
     :target: https://codeclimate.com/github/kkiyama117/django-HP/maintainability
-   :alt: Maintainability
+    :alt: Maintainability

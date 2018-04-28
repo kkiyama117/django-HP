@@ -8,7 +8,7 @@ django-HP
 
 .. class:: no-web no-pdf
 
-|pyup| |pyup-python| |codeclimate|
+|pyup| |pyup-python3| |codeclimate|
 
 =======  ============  ============  ==============
 branch   circle ci     travis ci     coverage

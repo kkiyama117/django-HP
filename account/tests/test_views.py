@@ -1,12 +1,10 @@
-from unittest import TestCase
-
 import pytest
 
-from django.test import RequestFactory
+from django.test import TestCase, RequestFactory
 from django.urls import reverse
 
 from account.models import User
-from account.views import index, profile
+from account.views import index, profile, register, register_save
 
 
 @pytest.mark.django_db
@@ -18,10 +16,8 @@ class ViewsTest(TestCase):
                                               password="19980117",
                                               first_name="木山", last_name="航平",
                                               tel="00000000000")
-        request = RequestFactory().get(reverse('account:index'))
-        request.user = login_user
-        response = index(request)
-
+        self.client.login(username=login_user.email, password="19980117")
+        response = self.client.get(reverse('account:index'))
         assert response.status_code == 200
 
     def test_profile(self):
@@ -30,13 +26,11 @@ class ViewsTest(TestCase):
                                               password="19980117",
                                               first_name="木山", last_name="航平",
                                               tel="00000000000")
-        request = RequestFactory().get(reverse('account:profile'))
-        request.user = login_user
-        response = profile(request)
-
+        self.client.login(username=login_user.email, password="19980117")
+        response = self.client.get(reverse('account:profile'))
+        # self.assertTemplateUsed(response, 'account/profile.html')
         assert response.status_code == 200
-        # assert response.data.user == login_user
 
     def test_register(self):
-        # request = RequestFactory().get(reverse('account:register'))
-        pass
+        response = self.client.get(reverse('account:register'))
+        assert response.status_code == 200

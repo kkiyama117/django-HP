@@ -17,8 +17,6 @@ master   |circle|      |travis|      |coverage|
 develop  |circle-dev|  |travis-dev|  |coverage-dev|
 =======  ============  ============  ==============
 
-.. contents::
-
 .. section-numbering::
 
 

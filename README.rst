@@ -27,7 +27,6 @@ Nothing.
 LICENSE
 ==========
 APACHE LICENSE version 2.0 です.
-私, @kkiyama117 にあります.
 
 .. link and refs
 

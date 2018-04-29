@@ -9,7 +9,7 @@ def index(request):
     context = {
         'user': request.user,
     }
-    return render(request, 'account/index.html', context)
+    return render(request, 'account/index.j2', context)
 
 
 @login_required

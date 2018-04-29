@@ -1,14 +1,14 @@
 .. hinatan documentation master file, created by
-sphinx-quickstart on Fri Apr 20 16:21:46 2018.
-You can adapt this file completely to your liking, but it should at least
-contain the root `toctree` directive.
+  sphinx-quickstart on Fri Apr 20 16:21:46 2018.
+  You can adapt this file completely to your liking, but it should at least
+  contain the root `toctree` directive.
 
 django-HP
 ##########
 
 .. class:: no-web no-pdf
 
-|pyup| |pyup-python3| |codeclimate|
+|codeclimate| |pyup| |pyup-python3|
 
 =======  ============  ============  ==============
 branch   circle ci     travis ci     coverage
@@ -16,8 +16,6 @@ branch   circle ci     travis ci     coverage
 master   |circle|      |travis|      |coverage|
 develop  |circle-dev|  |travis-dev|  |coverage-dev|
 =======  ============  ============  ==============
-
-.. contents::
 
 .. section-numbering::
 
@@ -29,17 +27,16 @@ Nothing.
 LICENSE
 ==========
 APACHE LICENSE version 2.0 です.
-私, @kkiyama117 にあります.
 
 .. link and refs
 
 .. |pyup| image:: https://pyup.io/repos/github/kkiyama117/django-HP/shield.svg
     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-     :alt: Updates
+    :alt: Updates
 
 .. |pyup-python3| image:: https://pyup.io/repos/github/kkiyama117/django-HP/python-3-shield.svg
     :target: https://pyup.io/repos/github/kkiyama117/django-HP/
-      :alt: Python 3
+    :alt: Python 3
 
 .. |circle| image:: https://circleci.com/gh/kkiyama117/django-HP.svg?style=svg
     :target: https://circleci.com/gh/kkiyama117/django-HP

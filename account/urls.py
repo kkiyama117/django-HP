@@ -27,7 +27,7 @@ urlpatterns = [
     path(
         'logout/',
         auth_views.logout,
-        {'template_name': 'account/index.html'},
+        {'template_name': 'account/index.j2'},
         name='logout'
     ),
     path('api/', include(router.urls)),

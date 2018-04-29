@@ -10,7 +10,8 @@ setup(
     packages=['lib', 'lib.tests', 'config', 'account', 'account.tests',
               'account.management', 'account.management.commands',
               'tweetable', 'tweetable.tests',
-              'transfacils', 'transfacils.tests', 'transfacils.helpers', ],
+              'transfacils', 'transfacils.tests', 'transfacils.helpers',
+              'unimap', "unimap.tests"],
     url='http://hinatan.jp',
     license='',
 )

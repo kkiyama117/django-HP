@@ -13,5 +13,5 @@ setup(
               'transfacils', 'transfacils.tests', 'transfacils.helpers',
               'unimap', "unimap.tests"],
     url='http://hinatan.jp',
-    license='',
+    license='', install_requires=['django-model-utils']
 )

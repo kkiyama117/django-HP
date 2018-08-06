@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements/base.txt requirements/base.in
 #
-beautifulsoup4==4.6.0
+beautifulsoup4==4.6.1
 celery==4.1.0
 django-environ==0.4.4
 django==2.0.4

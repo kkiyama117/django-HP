@@ -7,7 +7,7 @@ django-webtest==1.9.3
 factory-boy==2.11.1
 faker==0.8.18
 pytest-cov==2.5.1
-pytest-django==3.2.1
+pytest-django==3.4.1
 pytest-sugar==0.9.1
 pytest==3.5.1
 tox==3.0.0

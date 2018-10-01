@@ -7,7 +7,7 @@
 beautifulsoup4==4.6.3
 celery==4.2.1
 django-environ==0.4.5
-django==2.0.4
+django==2.1.2
 djangorestframework==3.8.2
 jinja2==2.10
 lxml==4.2.1
